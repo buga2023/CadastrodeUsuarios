@@ -8,14 +8,14 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @Entity
 @Table(name = "tb_cadastro")
 public class UsuarioModel {
-    Long ID;
-    String nome;
-    String email;
-    int idade;
-    int telefone;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String nome;
+    private String email;
+    private int idade;
+    private int telefone;
+
 
     public UsuarioModel(int idade, String nome, String email, int telefone) {
         this.idade = idade;
